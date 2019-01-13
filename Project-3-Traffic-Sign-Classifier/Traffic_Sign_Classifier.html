@@ -13138,15 +13138,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load pickled data</span>
 <span class="kn">import</span> <span class="nn">pickle</span>
 
-<span class="n">training_file</span> <span class="o">=</span> <span class="s1">&#39;traffic-signs-data/train.p&#39;</span>
-<span class="n">validation_file</span><span class="o">=</span> <span class="s1">&#39;traffic-signs-data/valid.p&#39;</span>
-<span class="n">testing_file</span> <span class="o">=</span> <span class="s1">&#39;traffic-signs-data/test.p&#39;</span>
+<span class="n">training_file</span> <span class="o">=</span> <span class="s1">&#39;data/train.p&#39;</span>
+<span class="n">validation_file</span><span class="o">=</span> <span class="s1">&#39;data/valid.p&#39;</span>
+<span class="n">testing_file</span> <span class="o">=</span> <span class="s1">&#39;data/test.p&#39;</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">training_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">train</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -13190,7 +13190,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Replace each question mark with the appropriate value. </span>
@@ -13264,7 +13264,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Data exploration visualization code goes here.</span>
@@ -13312,7 +13312,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13343,7 +13343,7 @@ Number of classes = 43
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[86]:</div>
+    <div class="prompt output_prompt">Out[129]:</div>
 
 
 
@@ -13419,7 +13419,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Preprocess the data here. It is required to normalize the data. Other preprocessing steps could include </span>
@@ -13480,7 +13480,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Shuffle</span>
@@ -13504,7 +13504,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[132]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -13520,7 +13520,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convLayer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">input_width</span><span class="p">,</span> <span class="n">input_height</span><span class="p">,</span> <span class="n">input_depth</span><span class="p">,</span> <span class="n">output_width</span><span class="p">,</span> <span class="n">output_height</span><span class="p">,</span> <span class="n">output_depth</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
@@ -13544,7 +13544,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[134]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fullyConnectedLayer</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">input_weight</span><span class="p">,</span> <span class="n">output_weight</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
@@ -13564,7 +13564,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Define your architecture here.</span>
@@ -13620,7 +13620,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -13670,7 +13670,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[137]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pipeline</span>
@@ -13690,7 +13690,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">265</span>
@@ -13718,7 +13718,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[139]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
@@ -13782,26 +13782,26 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training...
 Batches: 131 Samples: 34799 Epochs: 20
-1: 2.159 t85.388% v81.156% (25.6s) SAVED
-2: 0.781 t93.529% v88.753% (25.3s) SAVED
-3: 0.525 t95.862% v91.497% (26.6s) SAVED
-4: 0.411 t97.299% v94.059% (27.2s) SAVED
-5: 0.347 t98.098% v94.739% (26.1s) SAVED
-6: 0.295 t98.770% v95.442% (25.6s) SAVED
-7: 0.270 t98.874% v95.193% (24.9s) 
-8: 0.240 t98.790% v95.261% (24.2s) 
-9: 0.228 t99.178% v95.465% (23.4s) SAVED
-10: 0.212 t99.316% v95.896% (23.7s) SAVED
-11: 0.199 t99.126% v96.009% (23.6s) SAVED
-12: 0.189 t99.457% v96.077% (23.6s) SAVED
-13: 0.179 t99.420% v95.351% (23.9s) 
-14: 0.162 t99.526% v95.941% (25.0s) 
-15: 0.164 t99.514% v96.054% (23.8s) 
-16: 0.162 t99.629% v96.485% (23.6s) SAVED
-17: 0.151 t99.583% v95.465% (23.9s) 
-18: 0.151 t99.684% v96.100% (23.5s) 
-19: 0.142 t99.514% v95.578% (24.0s) 
-20: 0.143 t99.647% v95.646% (24.0s) 
+1: 2.193 t79.554% v77.211% (23.6s) SAVED
+2: 0.795 t92.319% v87.891% (24.3s) SAVED
+3: 0.509 t96.244% v92.948% (24.4s) SAVED
+4: 0.399 t97.500% v93.787% (23.7s) SAVED
+5: 0.327 t98.207% v94.490% (23.7s) SAVED
+6: 0.279 t98.922% v94.989% (23.8s) SAVED
+7: 0.249 t99.124% v96.145% (23.7s) SAVED
+8: 0.228 t99.152% v95.896% (23.7s) 
+9: 0.206 t99.359% v96.644% (23.9s) SAVED
+10: 0.197 t99.201% v96.236% (673.7s) 
+11: 0.189 t99.356% v95.578% (24.3s) 
+12: 0.169 t99.523% v96.327% (25.6s) 
+13: 0.161 t99.569% v96.508% (24.9s) 
+14: 0.155 t99.641% v96.281% (23.8s) 
+15: 0.150 t99.615% v96.213% (23.9s) 
+16: 0.149 t99.644% v96.463% (23.4s) 
+17: 0.138 t99.704% v96.304% (23.7s) 
+18: 0.137 t99.695% v96.916% (23.8s) SAVED
+19: 0.137 t99.730% v96.667% (23.7s) 
+20: 0.129 t99.681% v96.213% (24.1s) 
 </pre>
 </div>
 </div>
@@ -13812,7 +13812,7 @@ Batches: 131 Samples: 34799 Epochs: 20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -13837,7 +13837,7 @@ Batches: 131 Samples: 34799 Epochs: 20
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./model/ImNet
-Test Accuracy = 94.949
+Test Accuracy = 95.519
 </pre>
 </div>
 </div>
@@ -13872,18 +13872,19 @@ Test Accuracy = 94.949
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Load the images and plot them here.</span>
 <span class="c1">### Feel free to use as many code cells as needed.</span>
-<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">no_entry_img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/no_entry.jpg&quot;</span><span class="p">)</span>
-<span class="n">ahead_only_partial</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/ahead_only_partial.jpg&quot;</span><span class="p">)</span>
-<span class="n">roundabout_tilted</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/roundabout_tilted.jpg&quot;</span><span class="p">)</span>
-<span class="n">slippery_fully_covered</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/slippery_fully_covered.jpeg&quot;</span><span class="p">)</span>
-<span class="n">speed_120_tilted</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/speed_120_tilted.jpeg&quot;</span><span class="p">)</span>
+<span class="n">no_entry_img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/no_entry.jpg&quot;</span><span class="p">)</span>
+<span class="n">ahead_only_partial</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/ahead_only_partial.jpg&quot;</span><span class="p">)</span>
+<span class="n">roundabout_tilted</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/roundabout_tilted.jpg&quot;</span><span class="p">)</span>
+<span class="n">slippery_fully_covered</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/slippery_fully_covered.jpeg&quot;</span><span class="p">)</span>
+<span class="n">speed_120_tilted</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./images/speed_120_tilted.jpeg&quot;</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 
@@ -13935,7 +13936,7 @@ Test Accuracy = 94.949
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lets check a few of the images from the test set that have the same type</span>
@@ -14009,7 +14010,7 @@ Test Accuracy = 94.949
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -14064,7 +14065,7 @@ Speed limit (120km/h)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Run the predictions here and use the model to output the prediction for each image.</span>
@@ -14104,12 +14105,12 @@ Speed limit (120km/h)
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./model/ImNet
 The predictions are:
-[17 35 40  2  0]
+[17 35 40 20  4]
 No entry -expected-&gt; No entry
 Ahead only -expected-&gt; Ahead only
 Roundabout mandatory -expected-&gt; Roundabout mandatory
-Speed limit (50km/h) -expected-&gt; Slippery road
-Speed limit (20km/h) -expected-&gt; Speed limit (120km/h)
+Dangerous curve to the right -expected-&gt; Slippery road
+Speed limit (70km/h) -expected-&gt; Speed limit (120km/h)
 </pre>
 </div>
 </div>
@@ -14127,7 +14128,7 @@ Speed limit (20km/h) -expected-&gt; Speed limit (120km/h)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Calculate the accuracy for these 5 new images. </span>
@@ -14226,7 +14227,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Print out the top five softmax probabilities for the predictions on the German traffic sign images found on the web. </span>
@@ -14273,33 +14274,33 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 Expected: No entry
  -&gt; No entry 100.000%
  -&gt; Stop 0.000%
- -&gt; Priority road 0.000%
- -&gt; Bicycles crossing 0.000%
+ -&gt; Speed limit (70km/h) 0.000%
+ -&gt; Bumpy road 0.000%
  -&gt; Speed limit (20km/h) 0.000%
 Expected: Ahead only
- -&gt; Ahead only 61.600%
- -&gt; Keep left 13.122%
- -&gt; Speed limit (120km/h) 7.943%
- -&gt; Go straight or right 7.697%
- -&gt; Roundabout mandatory 4.727%
+ -&gt; Ahead only 51.686%
+ -&gt; End of no passing by vehicles over 3.5 metric tons 8.980%
+ -&gt; Speed limit (60km/h) 7.045%
+ -&gt; Vehicles over 3.5 metric tons prohibited 4.653%
+ -&gt; Dangerous curve to the right 4.472%
 Expected: Roundabout mandatory
- -&gt; Roundabout mandatory 99.998%
- -&gt; Go straight or left 0.001%
- -&gt; Keep left 0.001%
- -&gt; Turn right ahead 0.000%
- -&gt; Speed limit (70km/h) 0.000%
+ -&gt; Roundabout mandatory 99.995%
+ -&gt; End of all speed and passing limits 0.002%
+ -&gt; Go straight or right 0.002%
+ -&gt; Children crossing 0.000%
+ -&gt; Turn left ahead 0.000%
 Expected: Slippery road
- -&gt; Speed limit (50km/h) 29.393%
- -&gt; Speed limit (80km/h) 13.509%
- -&gt; Speed limit (70km/h) 9.749%
- -&gt; Speed limit (30km/h) 9.564%
- -&gt; Speed limit (120km/h) 5.834%
+ -&gt; Dangerous curve to the right 68.916%
+ -&gt; Road work 8.096%
+ -&gt; Children crossing 5.642%
+ -&gt; Speed limit (60km/h) 4.193%
+ -&gt; No passing for vehicles over 3.5 metric tons 3.246%
 Expected: Speed limit (120km/h)
- -&gt; Speed limit (20km/h) 55.907%
- -&gt; Speed limit (70km/h) 42.424%
- -&gt; Speed limit (30km/h) 1.629%
- -&gt; Speed limit (120km/h) 0.039%
- -&gt; Speed limit (50km/h) 0.001%
+ -&gt; Speed limit (70km/h) 97.184%
+ -&gt; Speed limit (20km/h) 2.811%
+ -&gt; Go straight or left 0.004%
+ -&gt; Keep left 0.001%
+ -&gt; Speed limit (30km/h) 0.000%
 </pre>
 </div>
 </div>
@@ -14347,7 +14348,7 @@ Expected: Speed limit (120km/h)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Visualize your network&#39;s feature maps here.</span>
@@ -14378,19 +14379,6 @@ Expected: Speed limit (120km/h)
             <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">activation</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:,</span> <span class="n">featuremap</span><span class="p">],</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">activation_min</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">activation</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:,</span> <span class="n">featuremap</span><span class="p">],</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>

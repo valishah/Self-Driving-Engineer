@@ -25,6 +25,9 @@ You're not required to use markdown for your writeup.  If you use another method
 
 The Project
 ---
+[Download the dataset](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/traffic-signs-data.zip). This is a pickled dataset in which we've already resized the images to 32x32.
+
+
 The goals / steps of this project are the following:
 * Load the data set
 * Explore, summarize and visualize the data set
